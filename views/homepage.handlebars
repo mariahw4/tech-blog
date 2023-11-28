@@ -1,0 +1,46 @@
+<!-- Conditionally render landing page content if not logged in -->
+<main class='leaves-bg'>
+  {{#unless logged_in}}
+  
+    <!-- Add a banner image within the landing page section -->
+    <section class='landing-page'>
+      
+
+      <div class='landing-page-content'>
+        <h2>Ready to embark on a literary adventure? </h2>
+        <p>Join our vibrant community of book lovers who share your passion.
+          Connect with fellow readers, participate in lively discussions, and
+          even join our book club where we dive deep into a new book every
+          month.</p>
+        <a style="color:#588b8b  " href='/signup' id='signup-link'>Start Here!</a>
+      </div>
+    </section>
+ 
+{{/unless}}
+
+<div
+  class='posts-container'
+  style='width: 100%; display: flex; flex-wrap: wrap; justify-content: center; gap: 15px;'
+>
+  {{#if logged_in}}
+    {{#each userPosts}}
+      <div
+        class='post'
+        style='flex-basis: calc(18% - 15px); box-sizing: border-box;'
+      >
+        <!-- Adjusted flex-basis to reduce outer container width -->
+        <div
+          style='border: 2px solid black; padding: 15px; display: flex; flex-direction: column; align-items: center; width: 100%;'
+        >
+
+          <div>
+            <h2 style='text-align: center; margin: 0;'>
+              <a style='color: #c8553d ;' href='/post/{{id}}'>{{name}}</a>
+            </h2>
+          </div>
+        </div>
+      </div>
+    {{/each}}
+  {{/if}}
+</div>
+</main>
