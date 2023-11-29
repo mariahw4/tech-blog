@@ -57,16 +57,18 @@
                 class='form-input'
                 name='post-content-edit'
               >{{post.post_content}}</textarea>
-              
-          </div>
+
+           <button type='submit'>Save</button>
+          </form>
           <div class='col-md-4'>
             <button
               class='btn btn-sm btn-warning btn-edit'
-              data-id='{{project.id}}'
+              data-id='{{post.id}}'
             >EDIT</button>
             <button
               class='btn btn-sm btn-danger delete-btn'
               data-id='{{post.id}}'
+              type='button'
             >DELETE</button>
           </div>
         </div>
