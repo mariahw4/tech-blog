@@ -8,7 +8,7 @@ console.log('Name:', name);
 console.log('Post content:', post_content);
 
   if (name && post_content) {
-    const response = await fetch(`/api/post`, {
+    const response = await fetch(`/api/posts`, {
       method: 'POST',
       body: JSON.stringify({ name, post_content }),
       headers: {
@@ -29,7 +29,7 @@ const delButtonHandler = async (event) => {
   if (event.target.hasAttribute('data-id')) {
     const id = event.target.getAttribute('data-id');
 
-    const response = await fetch(`/api/post/${id}`, {
+    const response = await fetch(`/api/posts/${id}`, {
       method: 'DELETE',
     });
 

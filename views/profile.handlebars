@@ -39,7 +39,7 @@
       {{#each posts as |post|}}
         <div class='row mb-2'>
           <div class='col-md-8'>
-            <h4><a href='/post/{{post.id}}'>{{post.name}}</a></h4>
+            <h4><a href='/posts/{{post.id}}'>{{post.name}}</a></h4>
 
             <!-- Edit form hidden by default -->
             <form
@@ -65,7 +65,7 @@
               data-id='{{project.id}}'
             >EDIT</button>
             <button
-              class='btn btn-sm btn-danger'
+              class='btn btn-sm btn-danger delete-btn'
               data-id='{{post.id}}'
             >DELETE</button>
           </div>
