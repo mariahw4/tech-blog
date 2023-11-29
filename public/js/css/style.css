@@ -1,0 +1,18 @@
+/* pallete: red #EF3E36, turqiose #17BEBB, black #2E282A */
+
+body {
+  min-height: 100vh;
+}
+
+header {
+  color: #ef3e36;
+}
+
+.post {
+  margin: 30px;
+}
+
+nav {
+    color: #17BEBB;
+}
+
